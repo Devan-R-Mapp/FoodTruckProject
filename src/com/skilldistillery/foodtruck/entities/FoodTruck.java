@@ -13,6 +13,10 @@ public class FoodTruck {
 		
 		
 	}
+	public FoodTruck(String name, String foodType, double rating,int nextTruckId) {
+		
+		
+	}
 	public FoodTruck() {
 		
 	}
@@ -35,18 +39,27 @@ public class FoodTruck {
 	public static int getNextTruckId() {
 		return nextTruckId;
 	}
-	public static void setNextTruckId(int nextTruckId) {
-		FoodTruck.nextTruckId = nextTruckId;
+	public void setNextTruckId(int nextTruckId) {
+		FoodTruck.nextTruckId = nextTruckId + 100;
 	}
+
+	
+	
+	  public void displayThisTruck() {
+		    String truckData = this.toString();
+		    System.out.println(truckData);
+		  }
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("FoodTruck: ");
+		builder.append("Food Truck: ");
 		builder.append(name);
-		builder.append(", foodType: ");
+		builder.append(". Food Type: ");
 		builder.append(foodType);
-		builder.append(", rating: ");
+		builder.append(". Rating: ");
 		builder.append(rating);
+		builder.append(". TruckID ");
+		builder.append(nextTruckId);
 		return builder.toString();
 	}
 	
