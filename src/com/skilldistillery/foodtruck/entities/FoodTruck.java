@@ -6,6 +6,8 @@ public class FoodTruck {
 	private String foodType;
 	private double rating; 
 	private static int nextTruckId;
+	
+	
 	public String getName() {
 		return name;
 	}
@@ -36,16 +38,16 @@ public class FoodTruck {
 	public void setRating(double rating) {
 		this.rating = rating;
 	}
-	public static int getNextTruckId() {
+	
+	  public int getNextTruckId() {
+		  nextTruckId++;
 		return nextTruckId;
 	}
 	public void setNextTruckId(int nextTruckId) {
-		FoodTruck.nextTruckId = nextTruckId + 100;
+		FoodTruck.nextTruckId = nextTruckId;
 	}
-
 	
-	
-	  public void displayThisTruck() {
+	public void displayThisTruck() {
 		    String truckData = this.toString();
 		    System.out.println(truckData);
 		  }
@@ -54,12 +56,12 @@ public class FoodTruck {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Food Truck: ");
 		builder.append(name);
-		builder.append(". Food Type: ");
+		builder.append(" --- Food Type: ");
 		builder.append(foodType);
-		builder.append(". Rating: ");
+		builder.append(" --- Rating: ");
 		builder.append(rating);
-		builder.append(". TruckID ");
-		builder.append(nextTruckId);
+		builder.append(" --- TruckID ");
+		builder.append(FoodTruck.nextTruckId);
 		return builder.toString();
 	}
 	
