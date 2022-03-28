@@ -1,5 +1,4 @@
-
-## Make Change Project
+##FoodTruck Project
 
 ### Week 2 Homework for Skill Distillery
 

@@ -45,7 +45,7 @@ public class FoodTruckApp {
 			thisFoodTruck.getNextTruckId();
 			FTL.addTruck(thisFoodTruck, i);
 			name = "quit";
-		}
+		}//for (int i = 0; i < 5; i++)
 
 		boolean keepGoing = true;
 		int userChoice = 0;
@@ -69,6 +69,8 @@ public class FoodTruckApp {
 				System.out.println();
 				break;
 			case 4:
+				System.out.println();
+				System.out.println("Goodbye");
 				keepGoing = false;
 				sc.close();
 				break;

@@ -5,7 +5,8 @@ public class FoodTruck {
 	private String name;
 	private String foodType;
 	private double rating; 
-	private static int nextTruckId;
+	private static int nextTruckId = 0;
+	private int id = 100;
 	
 	
 	public String getName() {
@@ -40,8 +41,8 @@ public class FoodTruck {
 	}
 	
 	  public int getNextTruckId() {
-		  nextTruckId++;
-		return nextTruckId;
+		  id += nextTruckId++;
+		return id;
 	}
 	public void setNextTruckId(int nextTruckId) {
 		FoodTruck.nextTruckId = nextTruckId;
@@ -61,7 +62,7 @@ public class FoodTruck {
 		builder.append(" --- Rating: ");
 		builder.append(rating);
 		builder.append(" --- TruckID ");
-		builder.append(FoodTruck.nextTruckId);
+		builder.append(id);
 		return builder.toString();
 	}
 	

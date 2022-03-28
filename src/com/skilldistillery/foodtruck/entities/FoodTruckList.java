@@ -1,6 +1,5 @@
 package com.skilldistillery.foodtruck.entities;
 
-import java.util.Arrays;
 
 public class FoodTruckList {
 	private FoodTruck[] Trucks;
