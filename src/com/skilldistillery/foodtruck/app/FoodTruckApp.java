@@ -10,18 +10,20 @@ public class FoodTruckApp {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		FoodTruckList FTL = new FoodTruckList();
+		
+		int totalTrucks = FTL.getTotalTrucks() ;
+//		FTL.setTotalTrucks(5);
 
-		System.out.println("Welcome to the food truck comparision app please enter up to 5 trucks.");
+		System.out.println("Welcome to the food truck comparision app please enter up to" + totalTrucks + "trucks.");
 		System.out.println(
-				"If you have less than 5 trucks, enter \"quit\" for the trucks name to move to the comparison.");
+				"If you have less than "+ totalTrucks + " trucks, enter \"quit\" for the trucks name to move to the comparison.");
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < totalTrucks; i++) {
 			String name = "";
 			String food = "";
 			double rating = 0.0;
 
 			while (name.isEmpty()) {
-
 				System.out.println("Please enter the name of the food truck: ");
 				name = sc.nextLine();
 			}
@@ -43,9 +45,9 @@ public class FoodTruckApp {
 			thisFoodTruck.setFoodType(food);
 			thisFoodTruck.setRating(rating);
 			thisFoodTruck.getNextTruckId();
-			FTL.addTruck(thisFoodTruck, i);
+			FTL.addTruck(thisFoodTruck);
 			name = "quit";
-		}//for (int i = 0; i < 5; i++)
+		} // for (int i = 0; i < totalTrucks; i++) 
 
 		boolean keepGoing = true;
 		int userChoice = 0;
@@ -78,6 +80,6 @@ public class FoodTruckApp {
 				break;
 			}
 
-		}
-	}
-}
+		} //while (keepGoing)
+	}//public static void main(String[] args) 
+} //public class FoodTruckApp

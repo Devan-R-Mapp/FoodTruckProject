@@ -6,8 +6,14 @@ public class FoodTruckList {
 
 
 	private int numTrucks = 0;
-	private static int TotalTrucks = 6;
+	public int TotalTrucks = 5;
 
+	public  int getTotalTrucks() {
+		return TotalTrucks;
+	}
+	public void setTotalTrucks(int i) {
+		this.TotalTrucks = i;
+	}
 	public FoodTruckList() {
 		Trucks = new FoodTruck[TotalTrucks];
 	}
@@ -20,8 +26,8 @@ public class FoodTruckList {
 	}
 	
 
-	public void addTruck(FoodTruck c, int i) {
-		Trucks[i] = c;
+	public void addTruck(FoodTruck c) {
+		Trucks[numTrucks] = c;
 		numTrucks++;
 	}
 	public FoodTruck getTruckByI( int i) {
